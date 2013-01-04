@@ -37,7 +37,7 @@ div.demo{
 	overflow:hidden;
 	-webkit-box-shadow:1px 1px 3px rgba(0,0,0,.2);
 	margin:10px;
-	width:460px;
+	max-width:460px;
 }
 
 div.demo::selection{
@@ -46,7 +46,7 @@ div.demo::selection{
 
 #button-demo {
   display: table;
-  width: 400px;
+  width: 100%;
   height: 300px;
   padding: 30px;
   background-color: #dddddd;

@@ -15,12 +15,12 @@ a:active,
 a:hover {
     color: black;
 }
-
+/*
 body {
     font-size: 1em;
     line-height: 1.4;
 }
-
+*/
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -42,6 +42,7 @@ hr {
 
 img {
     vertical-align: middle;
+    max-width: 100% !important;
 }
 
 fieldset {
@@ -65,11 +66,11 @@ textarea {
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
-
+/*
 body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
 }
-
+*/
 .wrapper {
     width: 90%;
     margin: 0 5%;

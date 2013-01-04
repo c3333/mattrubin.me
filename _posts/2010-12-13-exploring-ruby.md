@@ -13,7 +13,7 @@ For someone with extensive experience in the C++/Java syntax family, Ruby is bou
 
 One feature of Ruby I immediately appreciated was its strong use of Object-Oriented patterns. Ruby has the ability to:
 <ul>
-	<li>string functions together easily and intuitively (<code>poem.lines.to_a.reverse.join</code> returns a string of <code>poem</code> with its lines in reverse order),</li>
+	<li>string functions together easily and intuitively (<code>poem.lines.to_a .reverse.join</code> returns a string of <code>poem</code> with its lines in reverse order),</li>
 	<li>to treat raw strings and arrays as objects (<code>"Jimmy"*3</code> returns <code>"JimmyJimmyJimmy"</code> and <code>[10, 7, 14].max</code> returns <code>14</code>),</li>
 	<li>and to easily iterate with blocks (<code>books.values.each { |value| print value }</code> or <code>5.times { print "Odelay!" }</code>).</li>
 </ul>
