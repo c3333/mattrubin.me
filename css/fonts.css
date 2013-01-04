@@ -1,0 +1,14 @@
+@font-face {
+	font-family: "Tallys";
+	src: url("fonts/Tallys_15.otf");
+	/* A font by Jos Buivenga (exljbris) -> www.exljbris.com */
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+	font-family: "Tallys", "Palatino Linotype", "Book Antiqua", Palatino, Georgia,"Times New Roman", Times, serif;
+}
