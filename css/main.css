@@ -88,6 +88,12 @@ body {
     background: #f16529;
 }
 
+.header-container a,
+.footer-container a,
+.main aside a {
+    color: white;
+}
+
 .title {
     color: white;
 }
