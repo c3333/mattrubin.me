@@ -7,7 +7,7 @@ I had lunch yesterday with an old friend of mine who works as a web developer do
 
 To get a feel for <a href="http://ruby-lang.org" target="_blank">Ruby</a>, I started off at <a href="http://tryruby.org" target="_blank">TryRuby.org</a>, which provides an interactive Ruby command line right in the web browser. This little web app comes with an interactive tutorial to walk you through the basics of the language.
 
-<img src="http://mattrubin.me/blog/wp-content/uploads/tryruby.png" alt="TryRuby.org" title="TryRuby.org Screenshot" width="500" class="aligncenter size-medium wp-image-32">
+<img src="/images/tryruby.png" alt="TryRuby.org" title="TryRuby.org Screenshot" width="500">
 
 For someone with extensive experience in the C++/Java syntax family, Ruby is bound to feel a bit strange; It seems to be syntactically similar to Perl, as far as I can tell from my limited experience with the language.<sup><a href="#2010-12-13-1-1">1</a></sup> It took conscious effort to keep myself from adding a habitual semicolon at the end of every line, but fortunately Ruby considers this an acceptable, if unnecessary, practice.
 
