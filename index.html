@@ -14,8 +14,10 @@ layout: default
 {% endcomment %}
 
 {% for post in site.posts %}
+{% unless post.status == 'archived' %}
 	<article>
 		<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 		{{ post.content }}
 	</article>
+{% endunless %}
 {% endfor %}
