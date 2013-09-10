@@ -153,7 +153,15 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.8em;
 }
 
+article h1 {
+    margin-bottom: 0px;
+}
 
+article h1 + time {
+    font-size: 0.9em;
+    display: block;
+    margin-bottom: 30px;
+}
 
 
 
