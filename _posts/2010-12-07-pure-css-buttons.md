@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Pure CSS Buttons
-status: archived
 ---
 
 <div class="demo">

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Exploring Ruby: TryRuby.org"
-status: archived
 ---
 
 I had lunch yesterday with an old friend of mine who works as a web developer down in DC. We see each other every six months or so, and when we do we swap stories of whatever new technologies or languages we've been experimenting with. I told him about my latest personal project, an OpenGL-driven game engine (more on that later), and he asked me if I'd worked with <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a> yet. He's been telling me to check out the language and the framework for years, and this time around I decided to give it a shot.
