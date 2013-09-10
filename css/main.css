@@ -6,14 +6,11 @@ html,
 button,
 input,
 select,
-textarea {
-    color: #222;
-}
-
+textarea,
 a,
 a:active,
 a:hover {
-    color: black;
+    color: #223;
 }
 /*
 body {
@@ -128,11 +125,11 @@ nav a:hover {
    ========================================================================== */
 
 header {
-    border-bottom: black 1px solid;
+    border-bottom: 1px solid;
 }
 
 footer {
-    border-top: black 1px solid;
+    border-top: 1px solid;
     padding: 0.5em;
 }
 
@@ -145,7 +142,9 @@ article h1 a {
     text-decoration: none;
 }
 
-
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
 
 
 
