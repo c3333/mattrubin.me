@@ -124,7 +124,7 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
-header {
+.header-container header {
     border-bottom: 1px solid;
 }
 
@@ -133,13 +133,13 @@ footer {
     padding: 0.5em;
 }
 
-header h1 {
+.header-container header h1 {
     font-size: 2.5em;
     margin: 0.6em 0.3em 0.3em 0.3em;
 }
 
 a.silent,
-header a,
+.header-container header a,
 article h1 a {
     text-decoration: none;
 }
@@ -163,6 +163,47 @@ article h1 + time {
     margin-bottom: 30px;
 }
 
+blockquote:before {
+    content: "\201C";    
+}
+blockquote:after {
+    content: "\201D";
+}
+
+.main-container header {
+    margin-bottom: 2.5em;
+    text-align: center;
+}
+.main-container header h1 {
+    margin-bottom: 0;
+}
+.main-container header p {
+    margin-top: 0.3em;
+}
+
+.pin-item
+{
+    margin-top: 1em;
+}
+.pin-title {
+    display: block;
+    font-size:1.4em;
+    margin-bottom: 0.25em;
+}
+.pin-title:after
+{
+    content: "\a0\2192";
+}
+.pin-description {
+    display: block;
+    padding: 0 1em;
+    white-space: pre-wrap;
+}
+span.pin-description + br,
+.pin-title + br,
+.pin-tag {
+    display: none;
+}
 
 
 
