@@ -196,13 +196,17 @@ blockquote:after {
 }
 .pin-description {
     display: block;
-    padding: 0 1em;
     white-space: pre-wrap;
 }
 span.pin-description + br,
 .pin-title + br,
 .pin-tag {
     display: none;
+}
+@media only screen and (min-width: 768px) {
+    .pin-description {
+        padding: 0 1em;
+    }
 }
 
 
