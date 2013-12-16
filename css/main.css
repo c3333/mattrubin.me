@@ -226,6 +226,14 @@ a.reversefootnote
     padding-top: 50px;
 }
 
+pre {
+    font-size: 0.9em;
+    color: white;
+    background-color: #222;
+    padding: 5px 10px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+}
 
 
 /* ==========================================================================
