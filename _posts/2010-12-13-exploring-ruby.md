@@ -9,7 +9,7 @@ To get a feel for <a href="http://ruby-lang.org" target="_blank">Ruby</a>, I sta
 
 <img src="/images/tryruby.png" alt="TryRuby.org" title="TryRuby.org Screenshot" width="500">
 
-For someone with extensive experience in the C++/Java syntax family, Ruby is bound to feel a bit strange; It seems to be syntactically similar to Perl, as far as I can tell from my limited experience with the language.<sup><a href="#2010-12-13-1-1">1</a></sup> It took conscious effort to keep myself from adding a habitual semicolon at the end of every line, but fortunately Ruby considers this an acceptable, if unnecessary, practice.
+For someone with extensive experience in the C++/Java syntax family, Ruby is bound to feel a bit strange; It seems to be syntactically similar to Perl, as far as I can tell from my limited experience with the language.[^ruby-from-other-languages] It took conscious effort to keep myself from adding a habitual semicolon at the end of every line, but fortunately Ruby considers this an acceptable, if unnecessary, practice.
 
 One feature of Ruby I immediately appreciated was its strong use of Object-Oriented patterns. Ruby has the ability to:
 <ul>
@@ -22,4 +22,4 @@ I never made it through to the end of the tutorial because the interpreter start
 
 I didn't find Ruby so amazing that I would jump ship from my languages of choice, but I was impressed overall with how it aims to streamline the coding process by producing maximum effect with minimal code. While I wouldn't use it for my everyday programming needs, I find it particularly attractive in combination with Ruby on Rails, which looks at first glance to be an impressive framework for web application development. I'll definitely be investigating Rails further in the coming week.
 
-<ol><li class="small" id="2010-12-13-1-1">The Ruby site has <a href="http://www.ruby-lang.org/en/documentation/ruby-from-other-languages/" target="_blank">a section of its documentation</a> dedicated to what to expect when moving to Ruby from other languages. For each language it has a thorough list of similarities and differences.</li></ol>
+[^ruby-from-other-languages]: The Ruby site has <a href="http://www.ruby-lang.org/en/documentation/ruby-from-other-languages/" target="_blank">a section of its documentation</a> dedicated to what to expect when moving to Ruby from other languages. For each language it has a thorough list of similarities and differences.

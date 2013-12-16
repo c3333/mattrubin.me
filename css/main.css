@@ -209,6 +209,11 @@ span.pin-description + br,
     }
 }
 
+div.footnotes
+{
+    border-top: 1px solid;
+}
+
 a.reversefootnote
 {
     text-decoration: none;
@@ -216,6 +221,10 @@ a.reversefootnote
     padding-left: 0.5em;
 }
 
+.main article+article
+{
+    padding-top: 50px;
+}
 
 
 
