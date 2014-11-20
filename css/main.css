@@ -132,9 +132,9 @@ nav a:hover {
     border-bottom: 1px solid;
 }
 
-footer {
+.footer-container footer {
     border-top: 1px solid;
-    padding: 0.5em;
+    font-size: 0.8em;
 }
 
 .header-container header h1 {
@@ -154,7 +154,6 @@ h1, h2, h3, h4, h5, h6 {
 
 #source-link {
     float: right;
-    font-size: 0.8em;
 }
 
 article h1 {
