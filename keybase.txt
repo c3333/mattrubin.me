@@ -1,0 +1,82 @@
+==================================================================
+https://keybase.io/mattrubin
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://mattrubin.me
+  * I am mattrubin (https://keybase.io/mattrubin) on keybase.
+  * I have a public key with fingerprint 666B 8D8B 84E3 72BD EE93  5CF5 2A16 A113 CA4F 436F
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.4"
+        },
+        "key": {
+            "fingerprint": "666b8d8b84e372bdee935cf52a16a113ca4f436f",
+            "host": "keybase.io",
+            "key_id": "2A16A113CA4F436F",
+            "uid": "64dfd7ea6ae36f7162277caaf37b8100",
+            "username": "mattrubin"
+        },
+        "merkle_root": {
+            "ctime": 1423334574,
+            "hash": "e50404ef76dd850fff363289116ae62cff019af84b082ec666c1c370ff9fb10363e7268dfe6a24adffa2671e4cd48dd74706f47596b554c5789daea8fc1f3a84",
+            "seqno": 150378
+        },
+        "service": {
+            "hostname": "mattrubin.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1423334674,
+    "expire_in": 157680000,
+    "prev": "45a38198a7791e7c81bc651d3cf783c2a0965412974b9a089136c4e0d3dbc072",
+    "seqno": 2,
+    "tag": "signature"
+}
+
+which yields the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFdkntQFVUcxy8o+BrGRxONJYQrQzOG132fvaTNJRQdRaTJiWbk4dndc2Djsgt7
+L6+QMAnNxCchNQWZYE6ajoLDI4ksiuIxKRYqOOLIKAmBKaKGaHTWoSnbv/ac3+f3
+Pd/v75zdfpNs3l4L/T97qnVthOHV1i/b1p2Pn5NLyYaaQ4XlUopLQ7rH+tNhKqLC
+qBSUI0M3smtGkG6oyP6mO2iCCaUykenWDJ1QtB3YeSov1MKtZqzpSchMMzVLixJF
+UZZUSZZ4xAFWVhFycIKCBRYyImQYToE85jkRE8lkw+154lTqsWaippJdNpwRwwkf
+Ec5HEj6S1DIeF0RexSpAUISIyABGZFkAFAgxB2SJoWkLdCNzIlIq9HjMDFnTLcOp
+yExxoUTTMB6nVjyaxTA8y3EcLwCeWILuZNKFBJqneYSBqKqSQGOMOZFjJQdDMiCR
+VTCmGQfEEi/TEosUkllhFA4Q0IFlhiYwAqwoqRiJkOWhijFkRcAgXlF5SVUBD2gR
+80BwiLIg8IoAJIcKEZSwwmAOSjzJ4EbpukHMCTQHpDxrbWZqCrJ8W3P7fzw7WYZS
+aabhMRTDRSrJHk9amBXak5NmkVlIPpY4IZJIGlRya/+9VoagTw5EtAaCstM0EyVq
+FiEAUaLJZ52DMokmL0BOYhwSBMDBIKBIjKyIAqNyCgYSp7CQdogCz7AOwMsOSJP5
+caLCI1rlVFmhAftvTJb4hElE0q0l6dCTYSIqb5v3vMk2L2+br4+39W5t06fN+ucx
+Ly+cZSvYdn7dkPn13Mw9tZc3nnmr4YfnTnz7Sfqh+qCrXqt74m6HfOPz8OKW/OR9
+TiOp2n6j5shw1tvx0TErxxaPxu29/HGdnO8e3fl68Tnli5Lq8pb1gc74gMqBmdf0
+4PS9U6KctXdLQgNL2xthzNyuAZjvePfS1rLmw/O36x8Mb11UOXn7tN4lbXdOvvzi
+ssiR7M6Qro8+n3IvNzS2iO8vWrF26IaZNK8xjjmVV1amj9WsaN15qXnGosD7Xwri
+joiQA6dDftl9+Pfnr8VGvlYRddelTPXddb1yY01tX9yJ06kbFi5Qjvd0BJQNxx58
+YyBj7J3R616bcEZa+5KWP3qm9j+MHXdtHsjuTvCP19oyXFcvjj+rhnXbj5c3Lz5/
+YfqpP5tiPi0yl4bvGM7XEzZ9tarc/69oV1XDIT+joKMHzlwVHXPsp+U3G8t68PvF
+3+/IKfitmon8tbB75GZH2+BQ/uzEkeQzB2dmL2uaWvKosu9W1r2i+fcfOL9bU1Xa
+PVKZsMHnlUfardo5C9iTKZ3UgbPRFb1mZvELDcE/5gEfUDc+Vjd+u1B2l+YWXQkM
+PjejdR/lnlS8Yiio4ejTUS24Mzlg8xXq54CQwgHf1lcLXiofwqttg77edwbru6rW
+NwUdyd1Vwrrfe3DpGdv+/srIg0tHeym/NRf2NDnb+tpnV4w5dW3/h2e3jElMYFd9
+SvfRrIC/AQ==
+=9zq/
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mattrubin
+
+==================================================================
