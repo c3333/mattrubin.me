@@ -50,6 +50,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.0)
+  kramdown (~> 1.8)
   octopress (~> 3.0)
 
 BUNDLED WITH
