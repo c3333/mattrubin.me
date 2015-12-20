@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Matt Rubin</title>
+
+		<link rel="stylesheet" href="/css/normalize.css">
+		<link rel="stylesheet" href="/css/main.css">
+	</head>
+	<body>
+		<div class="header-container">
+	<header class="wrapper clearfix">
+		<a href="/">
+			<h1 class="title">Matt Rubin</h1>
+		</a>
+		<nav>
+			<ul>
+				
+			</ul>
+		</nav>
+	</header>
+</div>
+
+<div class="main-container">
+	<div class="main wrapper clearfix">
+		
+
+
+
+	<article>
+		<h1><a href="/2013/12/14/md5-otps.html">The Unreliability of MD5-based OTPs</a></h1>
+		<time datetime="2013-12-14T00:00:00-05:00">December 14, 2013</time>
+		<p>An integral part of generating the <a href="https://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm">one-time passwords</a> commonly used for <a href="https://en.wikipedia.org/wiki/Multi-factor_authentication">two-factor authentication</a> is computing an <a href="https://en.wikipedia.org/wiki/HMAC">HMAC</a> of the token secret and counter values<sup id="fnref:computing-an-hmac"><a href="#fn:computing-an-hmac" class="footnote">1</a></sup>. Any cryptographic hash function can be used in computing the HMAC<sup id="fnref:any-hash-function"><a href="#fn:any-hash-function" class="footnote">2</a></sup>, so in developing the <a href="http://mattrubin.me/authenticator/">Authenticator</a> app, I included support for four common hash functions: <a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1</a>, <a href="https://en.wikipedia.org/wiki/SHA-256">SHA-256</a>, <a href="https://en.wikipedia.org/wiki/SHA-512">SHA-512</a>, and <a href="https://en.wikipedia.org/wiki/MD5">MD5</a>. On close examination, however, it becomes clear that MD5 cannot be used to consistently produce valid one-time passwords.</p>
+
+<p>Neither of the <a href="https://en.wikipedia.org/wiki/Request_for_Comments">RFCs</a> which define the common one-time password algorithms mentions MD5 as a possible hash function; the <a href="https://tools.ietf.org/html/rfc4226">HOTP RFC</a> specifically uses SHA-1<sup id="fnref:hotp-sha-options"><a href="#fn:hotp-sha-options" class="footnote">3</a></sup>, and the <a href="https://tools.ietf.org/html/rfc6238">TOTP RFC</a> adds the option to use SHA-256 or SHA-512<sup id="fnref:totp-sha-options"><a href="#fn:totp-sha-options" class="footnote">4</a></sup>. While not explicitly mentioned in the OTP specificactions, MD5 <em>is</em> one of the algorithm options supported by the Google-designed <a href="https://code.google.com/p/google-authenticator/wiki/KeyUriFormat#Algorithm">OTP key URI format</a>, and since <a href="http://mattrubin.me/authenticator/">Authenticator</a> was originally designed as an open-source replacement for Google’s own authenticator app, it seemed important to support MD5 as an option.</p>
+
+<h2 id="the-problem">The Problem</h2>
+
+<p>The source of the problem is the length of the hash produced by MD5. At 16 bytes, it is shorter than the hash values produced by any of the SHA hash functions. Because of the way the one-time password algorithm derives a password from the hash, it is possible for a password to be extracted from memory that lies outside of an MD5 hash.</p>
+
+<p>As described in <a href="https://tools.ietf.org/html/rfc4226#section-5.3">RFC 4226</a>, the HOTP algorithm first computes a hash from the secret and counter values, and then extracts a four-byte segment of the hash value to use as the basis for the password. The choice of <em>which</em> four bytes to extract is made by casting the last four bits of the hash as an integer and using that integer value as an offset into the hash. Starting at this offset, the next four bytes are read from the hash and used in further computation to produce the password.</p>
+
+<p>Because the offset integer is specified by only four bits, it must be one of the integer values that can be represented in four bits, in the range [0, 15]. This is a problem when the hash function used is MD5, because the length of its hash is 16 bytes. If the offset integer is 13 or greater, part of the four bytes extracted will extend beyond the end of the hash, reading from memory not produced by the hash function. Depending on the contents of this memory, the passwords produced will be inconsistent and unreliable.</p>
+
+<h2 id="an-example">An Example</h2>
+
+<p>Consider the OTP token represented by this URL:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>otpauth://hotp/MD5?algorithm=MD5&amp;secret=AEAAAAA&amp;counter=1
+</code></pre>
+</div>
+
+<p>The hash value is computed as follows:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>secret = &lt;01000000&gt;
+counter = &lt;00000000 00000001&gt;
+hash = HMAC-MD5(secret, counter)
+</code></pre>
+</div>
+
+<p>The hash value produced is:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;650c4bfb 740d273d 51d51866 a874b2ae&gt;
+</code></pre>
+</div>
+
+<p>When broken down by byte <a href="https://tools.ietf.org/html/rfc4226#section-5.4">as is done in the RFC</a>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Byte Number  00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
+            -------------------------------------------------
+Hash Value   65 0c 4b fb 74 0d 27 3d 51 d5 18 66 a8 74 b2 ae 
+</code></pre>
+</div>
+
+<p>The last four bits of the hash are represented by the final hexidecimal character (“<code class="highlighter-rouge">e</code>”) and produce an offset value of 14. As is clear from the byte table above, selecting four bytes from the 16-byte hash starting at byte 14 would overrun the end of the hash, producing a truncated value of <code class="highlighter-rouge">b2 ae ?? ??</code> where the “<code class="highlighter-rouge">?</code>” characters represent nondeterministic and invalid bits.</p>
+
+<h2 id="no-more-md5">No More MD5</h2>
+
+<p>Because of the flaw described below, I am removing support for MD5-based one-time passwords from Authenticator. I haven’t encountered any web sites which actually use MD5-based OTPs, and any website which has tried likely noticed how unreliable the OTPs were. For this reason – <a href="https://tools.ietf.org/html/rfc6151">and this one</a> – I’d suggest that any other developers dealing with one-time passwords avoid using – or even supporting – MD5.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:computing-an-hmac">
+      <p><a href="https://tools.ietf.org/html/rfc4226#section-5">RFC 4226, Section 5</a>: “The HOTP algorithm is based on an increasing counter value and a static symmetric key known only to the token and the validation service. In order to create the HOTP value, we will use the HMAC-SHA-1 algorithm…” <a href="#fnref:computing-an-hmac" class="reversefootnote">&#x21A9;&#xFE0E;</a></p>
+    </li>
+    <li id="fn:any-hash-function">
+      <p><a href="https://tools.ietf.org/html/rfc2104#page-2">RFC 2104</a>: “HMAC can be used in combination with any iterated cryptographic hash function. MD5 and SHA-1 are examples of such hash functions.” <a href="#fnref:any-hash-function" class="reversefootnote">&#x21A9;&#xFE0E;</a></p>
+    </li>
+    <li id="fn:hotp-sha-options">
+      <p><a href="https://tools.ietf.org/html/rfc4226#section-5.2">RFC 4226, Section 5.2</a>: “In order to create the HOTP value, we will use the HMAC-SHA-1 algorithm, as defined in <a href="https://tools.ietf.org/html/rfc2104">RFC 2104</a>” <a href="#fnref:hotp-sha-options" class="reversefootnote">&#x21A9;&#xFE0E;</a></p>
+    </li>
+    <li id="fn:totp-sha-options">
+      <p><a href="https://tools.ietf.org/html/rfc6238#section-1.2">RFC 6238, Section 1.2</a>: “TOTP implementations MAY use HMAC-SHA-256 or HMAC-SHA-512 functions, based on SHA-256 or SHA-512 [SHA2] hash functions, instead of the HMAC-SHA-1 function that has been specified for the HOTP computation in [RFC4226].” <a href="#fnref:totp-sha-options" class="reversefootnote">&#x21A9;&#xFE0E;</a></p>
+    </li>
+  </ol>
+</div>
+
+	</article>
+
+
+
+
+
+
+
+	</div>
+</div>
+
+<div class="footer-container">
+	<footer class="wrapper">
+		<a class="silent" href="http://mattrubin.me">&copy; 2010-2015 Matt Rubin</a>
+		<a id="source-link" href="https://github.com/mattrubin/mattrubin.github.io/tree/master/index.html">Source</a>
+	</footer>
+</div>
+
+	</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Exploring Ruby: TryRuby.org | Matt Rubin</title>
+
+		<link rel="stylesheet" href="/css/normalize.css">
+		<link rel="stylesheet" href="/css/main.css">
+	</head>
+	<body>
+		<div class="header-container">
+	<header class="wrapper clearfix">
+		<a href="/">
+			<h1 class="title">Matt Rubin</h1>
+		</a>
+		<nav>
+			<ul>
+				
+			</ul>
+		</nav>
+	</header>
+</div>
+
+<div class="main-container">
+	<div class="main wrapper clearfix">
+		<article>
+    <h1>Exploring Ruby: TryRuby.org</h1>
+    <time datetime="2010-12-13T00:00:00-05:00">December 13, 2010</time>
+    <p>I had lunch yesterday with an old friend of mine who works as a web developer down in DC. We see each other every six months or so, and when we do we swap stories of whatever new technologies or languages we’ve been experimenting with. I told him about my latest personal project, an OpenGL-driven game engine (more on that later), and he asked me if I’d worked with <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a> yet. He’s been telling me to check out the language and the framework for years, and this time around I decided to give it a shot.</p>
+
+<p>To get a feel for <a href="http://ruby-lang.org" target="_blank">Ruby</a>, I started off at <a href="http://tryruby.org" target="_blank">TryRuby.org</a>, which provides an interactive Ruby command line right in the web browser. This little web app comes with an interactive tutorial to walk you through the basics of the language.</p>
+
+<p><img src="/images/tryruby.png" alt="TryRuby.org" title="TryRuby.org Screenshot" width="500" /></p>
+
+<p>For someone with extensive experience in the C++/Java syntax family, Ruby is bound to feel a bit strange; It seems to be syntactically similar to Perl, as far as I can tell from my limited experience with the language.<sup id="fnref:ruby-from-other-languages"><a href="#fn:ruby-from-other-languages" class="footnote">1</a></sup> It took conscious effort to keep myself from adding a habitual semicolon at the end of every line, but fortunately Ruby considers this an acceptable, if unnecessary, practice.</p>
+
+<p>One feature of Ruby I immediately appreciated was its strong use of Object-Oriented patterns. Ruby has the ability to:</p>
+<ul>
+	<li>string functions together easily and intuitively (<code>poem.lines.to_a .reverse.join</code> returns a string of <code>poem</code> with its lines in reverse order),</li>
+	<li>to treat raw strings and arrays as objects (<code>"Jimmy"*3</code> returns <code>"JimmyJimmyJimmy"</code> and <code>[10, 7, 14].max</code> returns <code>14</code>),</li>
+	<li>and to easily iterate with blocks (<code>books.values.each { |value| print value }</code> or <code>5.times { print "Odelay!" }</code>).</li>
+</ul>
+
+<p>I never made it through to the end of the tutorial because the interpreter started spewing back cryptic error messages, even when I was typing exactly what the tutorial told me to. These errors are to be expected, as the browser-based interpreter is still in beta, and the developers have included a handy <code>reset</code> command for just such an occasion. I could have carried on past the errors, but I had gotten enough of the tutorial to have a solid first impression of Ruby as a language.</p>
+
+<p>I didn’t find Ruby so amazing that I would jump ship from my languages of choice, but I was impressed overall with how it aims to streamline the coding process by producing maximum effect with minimal code. While I wouldn’t use it for my everyday programming needs, I find it particularly attractive in combination with Ruby on Rails, which looks at first glance to be an impressive framework for web application development. I’ll definitely be investigating Rails further in the coming week.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:ruby-from-other-languages">
+      <p>The Ruby site has <a href="http://www.ruby-lang.org/en/documentation/ruby-from-other-languages/" target="_blank">a section of its documentation</a> dedicated to what to expect when moving to Ruby from other languages. For each language it has a thorough list of similarities and differences. <a href="#fnref:ruby-from-other-languages" class="reversefootnote">&#x21A9;&#xFE0E;</a></p>
+    </li>
+  </ol>
+</div>
+
+</article>
+
+
+	</div>
+</div>
+
+<div class="footer-container">
+	<footer class="wrapper">
+		<a class="silent" href="http://mattrubin.me">&copy; 2010-2015 Matt Rubin</a>
+		<a id="source-link" href="https://github.com/mattrubin/mattrubin.github.io/tree/master/_posts/2010-12-13-exploring-ruby.md">Source</a>
+	</footer>
+</div>
+
+	</body>
+</html>
