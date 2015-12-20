@@ -49,6 +49,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  jekyll (~> 3.0)
   octopress (~> 3.0)
 
 BUNDLED WITH

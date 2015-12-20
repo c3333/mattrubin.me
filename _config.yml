@@ -3,6 +3,6 @@ markdown: kramdown
 kramdown:
   footnote_backlink: "&#x21A9;&#xFE0E;"
 exclude:
- - CNAME
- - Gemfile
- - Gemfile.lock
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
