@@ -1,0 +1,5 @@
+method: git
+site_dir: _site
+
+git_url: https://github.com/mattrubin/mattrubin.me
+git_branch: master
