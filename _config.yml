@@ -6,3 +6,8 @@ exclude:
   - CNAME
   - Gemfile
   - Gemfile.lock
+
+asset_pipeline:
+  order_css:
+    - normalize.css
+    # Additional assets will be appended based on their order in the file system.
