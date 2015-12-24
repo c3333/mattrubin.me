@@ -203,6 +203,11 @@ span.pin-description + br,
     }
 }
 
+sup a.footnote {
+    text-decoration: none;
+    padding-left: 0.1em;
+}
+
 div.footnotes
 {
     border-top: 1px solid;
@@ -211,7 +216,7 @@ div.footnotes
 a.reversefootnote
 {
     text-decoration: none;
-    font-size: 0.6em;
+    font-size: 80%;
     padding-left: 0.5em;
 }
 
