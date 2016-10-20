@@ -30,7 +30,12 @@
     <time datetime="2013-12-14T00:00:00-05:00">December 14, 2013</time>
     <p>An integral part of generating the <a href="https://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm">one-time passwords</a> commonly used for <a href="https://en.wikipedia.org/wiki/Multi-factor_authentication">two-factor authentication</a> is computing an <a href="https://en.wikipedia.org/wiki/HMAC">HMAC</a> of the token secret and counter values<sup id="fnref:computing-an-hmac"><a href="#fn:computing-an-hmac" class="footnote">1</a></sup>. Any cryptographic hash function can be used in computing the HMAC<sup id="fnref:any-hash-function"><a href="#fn:any-hash-function" class="footnote">2</a></sup>, so in developing the <a href="https://mattrubin.me/authenticator/">Authenticator</a> app, I included support for four common hash functions: <a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1</a>, <a href="https://en.wikipedia.org/wiki/SHA-256">SHA-256</a>, <a href="https://en.wikipedia.org/wiki/SHA-512">SHA-512</a>, and <a href="https://en.wikipedia.org/wiki/MD5">MD5</a>. On close examination, however, it becomes clear that MD5 cannot be used to consistently produce valid one-time passwords.</p>
 
-<p>Neither of the <a href="https://en.wikipedia.org/wiki/Request_for_Comments">RFCs</a> which define the common one-time password algorithms mentions MD5 as a possible hash function; the <a href="https://tools.ietf.org/html/rfc4226">HOTP RFC</a> specifically uses SHA-1<sup id="fnref:hotp-sha-options"><a href="#fn:hotp-sha-options" class="footnote">3</a></sup>, and the <a href="https://tools.ietf.org/html/rfc6238">TOTP RFC</a> adds the option to use SHA-256 or SHA-512<sup id="fnref:totp-sha-options"><a href="#fn:totp-sha-options" class="footnote">4</a></sup>. While not explicitly mentioned in the OTP specificactions, MD5 <em>is</em> one of the algorithm options supported by the Google-designed <a href="https://code.google.com/p/google-authenticator/wiki/KeyUriFormat#Algorithm">OTP key URI format</a>, and since <a href="https://mattrubin.me/authenticator/">Authenticator</a> was originally designed as an open-source replacement for Google’s own authenticator app, it seemed important to support MD5 as an option.</p>
+<p>Neither of the <a href="https://en.wikipedia.org/wiki/Request_for_Comments">RFCs</a> which define the common one-time password algorithms mentions MD5 as a possible hash function; the <a href="https://tools.ietf.org/html/rfc4226">HOTP RFC</a> specifically uses SHA-1<sup id="fnref:hotp-sha-options"><a href="#fn:hotp-sha-options" class="footnote">3</a></sup>, and the <a href="https://tools.ietf.org/html/rfc6238">TOTP RFC</a> adds the option to use SHA-256 or SHA-512<sup id="fnref:totp-sha-options"><a href="#fn:totp-sha-options" class="footnote">4</a></sup>. While not explicitly mentioned in the OTP specificactions, MD5 <em>is</em> one of the algorithm options supported by the Google-designed <a href="https://github.com/google/google-authenticator/wiki/Key-Uri-Format#algorithm">OTP key URI format</a>, and since <a href="https://mattrubin.me/authenticator/">Authenticator</a> was originally designed as an open-source replacement for Google’s own authenticator app, it seemed important to support MD5 as an option.</p>
+
+<aside>
+	<strong>Update:</strong>
+	After this post was written, the documentation for Google's OTP key URI format was <a href="https://github.com/google/google-authenticator/wiki/Key-Uri-Format/_history">updated</a> to remove MD5 from the list of possible <code>algorithm</code> values.
+</aside>
 
 <h2 id="the-problem">The Problem</h2>
 
@@ -74,15 +79,15 @@ Hash Value   65 0c 4b fb 74 0d 27 3d 51 d5 18 66 a8 74 b2 ae
 
 <h2 id="no-more-md5">No More MD5</h2>
 
-<p>Because of the flaw described below, I am removing support for MD5-based one-time passwords from Authenticator. I haven’t encountered any web sites which actually use MD5-based OTPs, and any website which has tried likely noticed how unreliable the OTPs were. For this reason – <a href="https://tools.ietf.org/html/rfc6151">and this one</a> – I’d suggest that any other developers dealing with one-time passwords avoid using – or even supporting – MD5.</p>
+<p>Because of the flaw described below, I am removing support for MD5-based one-time passwords from Authenticator. I haven’t encountered any web sites which actually use MD5-based OTPs, and any website which has tried likely noticed how unreliable the OTPs were. For this reason – <a href="https://tools.ietf.org/html/rfc6151">among others</a> – I’d suggest that any other developers dealing with one-time passwords avoid using – or even supporting – MD5.</p>
 
 <div class="footnotes">
   <ol>
     <li id="fn:computing-an-hmac">
-      <p><a href="https://tools.ietf.org/html/rfc4226#section-5">RFC 4226, Section 5</a>: “The HOTP algorithm is based on an increasing counter value and a static symmetric key known only to the token and the validation service. In order to create the HOTP value, we will use the HMAC-SHA-1 algorithm…” <a href="#fnref:computing-an-hmac" class="reversefootnote">&#x21A9;&#xFE0E;</a></p>
+      <p><a href="https://tools.ietf.org/html/rfc4226#section-5.2">RFC 4226, Section 5.2</a>: “The HOTP algorithm is based on an increasing counter value and a static symmetric key known only to the token and the validation service. In order to create the HOTP value, we will use the HMAC-SHA-1 algorithm…” <a href="#fnref:computing-an-hmac" class="reversefootnote">&#x21A9;&#xFE0E;</a></p>
     </li>
     <li id="fn:any-hash-function">
-      <p><a href="https://tools.ietf.org/html/rfc2104#page-2">RFC 2104</a>: “HMAC can be used in combination with any iterated cryptographic hash function. MD5 and SHA-1 are examples of such hash functions.” <a href="#fnref:any-hash-function" class="reversefootnote">&#x21A9;&#xFE0E;</a></p>
+      <p><a href="https://tools.ietf.org/html/rfc2104#section-1">RFC 2104, Section 1</a>: “HMAC can be used in combination with any iterated cryptographic hash function. MD5 and SHA-1 are examples of such hash functions.” <a href="#fnref:any-hash-function" class="reversefootnote">&#x21A9;&#xFE0E;</a></p>
     </li>
     <li id="fn:hotp-sha-options">
       <p><a href="https://tools.ietf.org/html/rfc4226#section-5.2">RFC 4226, Section 5.2</a>: “In order to create the HOTP value, we will use the HMAC-SHA-1 algorithm, as defined in <a href="https://tools.ietf.org/html/rfc2104">RFC 2104</a>” <a href="#fnref:hotp-sha-options" class="reversefootnote">&#x21A9;&#xFE0E;</a></p>
