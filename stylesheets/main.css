@@ -84,22 +84,6 @@ textarea {
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
 
-html,
-a,
-a:active,
-a:hover {
-    color: #223;
-}
-
-html {
-    line-height: 2em;
-    font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
-}
-
-img {
-    max-width: 100% !important;
-}
-
 .wrapper {
     width: 90%;
     margin: 0 5%;
@@ -125,6 +109,22 @@ img {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+html,
+a,
+a:active,
+a:hover {
+    color: #223;
+}
+
+html {
+    line-height: 2em;
+    font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+}
+
+img {
+    max-width: 100% !important;
+}
 
 .header-container header {
     border-bottom: 1px solid;
