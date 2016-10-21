@@ -95,11 +95,28 @@ textarea {
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
-/*
-body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+
+html,
+button,
+input,
+select,
+textarea,
+a,
+a:active,
+a:hover {
+    color: #223;
 }
-*/
+
+body {
+    font-size: 1em;
+    line-height: 2em;
+    font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+}
+
+img {
+    max-width: 100% !important;
+}
+
 .wrapper {
     width: 90%;
     margin: 0 5%;
