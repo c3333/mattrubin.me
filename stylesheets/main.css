@@ -97,18 +97,13 @@ textarea {
    ========================================================================== */
 
 html,
-button,
-input,
-select,
-textarea,
 a,
 a:active,
 a:hover {
     color: #223;
 }
 
-body {
-    font-size: 1em;
+html {
     line-height: 2em;
     font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
 }
