@@ -1,0 +1,289 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+    background-color: #232332;
+    color: #FAFAF0;
+}
+
+a,
+a:hover,
+a:visited {
+    color: inherit;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+    font-weight: lighter;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+    padding: 20px 0;
+}
+
+/* ===================
+    ALL: Orange Theme
+   =================== */
+
+header,
+footer {
+    text-align: center;
+}
+
+header {
+    border-bottom: 1px solid #FAFAF0;
+}
+
+footer,
+aside {
+    border-top: 1px solid #FAFAF0;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 15px;
+
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+main li {
+    margin: 0.5em 0;
+}
+
+header svg {
+    margin: 5px;
+}
+
+header h1 {
+    font-size: 2.4em;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+img.screenshot {
+    border: 1px solid rgba(255,255,255,0.2);
+    max-width: 200px;
+    display: block;
+    margin: 15px auto;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+    img.screenshot {
+        display: inline-block;
+        margin: 15px;
+    }
+
+    #logo {
+        width: 150px;
+        height: 150px;
+    }
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    main article {
+        float: left;
+        width: 57%;
+    }
+
+    main aside {
+        float: right;
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 720px; /* 800px - 10% for margins */
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
