@@ -53,55 +53,63 @@
   </li>
 </ul>
 
-<h2 id="the-basics-tools-youre-already-using">The Basics (Tools you’re already using)</h2>
+<h2 id="the-basics-securing-the-tools-youre-already-using">The Basics (Securing the tools you’re already using)</h2>
 
 <h3 id="secure-your-device">Secure your device</h3>
 <ul>
-  <li>
-    <p>Update everything!</p>
+  <li>Update everything!
+    <ul>
+      <li>your phone, your computer, your web browser</li>
+    </ul>
   </li>
   <li>Set a password on your phone
     <ul>
       <li>at least six digits</li>
-      <li>for iphone, this enables full-disk encryption</li>
     </ul>
   </li>
-  <li>turn on FDE on your computer
+  <li>Turn on disk encryption on your phone and computer
     <ul>
-      <li>if you lose your password, you lose your data</li>
+      <li>This prevents anyone who gets physical access to your phone or computer from getting the information on it</li>
+      <li>On an iPhone, simply setting a passcode <a href="https://ssd.eff.org/en/module/how-encrypt-your-iphone">enables full-disk encryption</a></li>
+      <li>Full-disk encryption can be enabled on Android phones, Mac and Windows computers</li>
+      <li>Be aware: if you lose your password, you lose your data</li>
     </ul>
   </li>
 </ul>
 
 <h3 id="secure-your-online-accounts">Secure your online accounts</h3>
 <ul>
-  <li>Use strong passwords
+  <li>Use <a href="https://ssd.eff.org/en/module/creating-strong-passwords">strong passwords</a>
     <ul>
-      <li><em>Strong</em></li>
-      <li><em>Never reuse</em></li>
-      <li>Diceware
+      <li><em>Never</em> reuse passwords
         <ul>
-          <li>current recommendation: 6-8 words</li>
-          <li>Generate rando passwords if there’s a character limit</li>
+          <li>If you reuse a username and password, then if one site is hacked and your password is stolen, then whoever has that information can immediately log in as you on any other website where you used the same password.</li>
         </ul>
       </li>
+      <li>Try a “<a href="https://ssd.eff.org/en/module/animated-overview-how-make-super-secure-password-using-dice">diceware</a>” password
+        <ul>
+          <li>randomly chosen words, strung together into a nonsense sentence.</li>
+          <li>current recommendation: 6-8 words</li>
+        </ul>
+      </li>
+      <li>If the website has a character limit, generate a password that’s a random jumble of letters, numbers, and symbols, and make it as long as possible</li>
     </ul>
   </li>
-  <li>Password manager (Creating strong passwords and keeping them safe ***)
+  <li><a href="https://ssd.eff.org/en/module/animated-overview-using-password-managers-stay-safe-online">Password manager</a>
     <ul>
-      <li>Options:
+      <li>A tool for generating strong, random passwords and keeping them safe</li>
+      <li>A few options:
         <ul>
           <li>Keepassx</li>
           <li>Last pass</li>
-          <li>One password</li>
+          <li>1Password</li>
           <li>Dashlane</li>
         </ul>
       </li>
-      <li>Tradeoffs</li>
-      <li>Price, open source, local v cloud</li>
+      <li>Tradeoffs between these options: Price, open source, local v cloud storage</li>
     </ul>
   </li>
-  <li>Two-factor authentication
+  <li><a href="https://ssd.eff.org/en/glossary/two-factor-authentication">Two-factor authentication</a>
     <ul>
       <li>Enable it everywhere you can (Use 2FA wherever available)</li>
       <li>Prefer tokens instead of SMS</li>
@@ -115,15 +123,36 @@
   </li>
 </ul>
 
-<p>??</p>
-<h2 id="secure-your-online-privacy">Secure your online privacy</h2>
+<h2 id="safer-communication">Safer communication</h2>
+
 <ul>
-  <li>Facebook privacy settings</li>
-  <li>Google privacy settings
-??</li>
+  <li>What is End-to-End Encryption?</li>
+  <li>Signal (encrypted messaging with signal ***)
+    <ul>
+      <li>imessage and whatsapp are okay</li>
+      <li>never use the green bubble</li>
+    </ul>
+  </li>
+  <li>why email is bad:
+    <ul>
+      <li>third-party doctrine and the Stored Communications Act</li>
+      <li>delete your old emails</li>
+      <li>just don’t use it for anything that matters</li>
+      <li>PGP (Encrypted email with PGP ***)
+        <ul>
+          <li>CP says: “just use the SSD guide”</li>
+          <li>tradeoffs/difficulties
+            <ul>
+              <li>Only encrypts the body of the message</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
 
-<h2 id="safe-browsing">Safe browsing</h2>
+<h2 id="safer-web-browsing">Safer web browsing</h2>
 
 <h3 id="browser-extensions-privacy-enhancing-browser-addons-">Browser extensions (Privacy-enhancing browser addons ***)</h3>
 <ul>
@@ -185,48 +214,15 @@
   <li>how to climb a crane and drop a banner? I don’t know. use tor to figure that out yourself.</li>
 </ul>
 
-<h2 id="safe-communication">Safe communication</h2>
-
-<ul>
-  <li>What is End-to-End Encryption?</li>
-  <li>Signal (encrypted messaging with signal ***)
-    <ul>
-      <li>imessage and whatsapp are okay</li>
-      <li>never use the green bubble</li>
-    </ul>
-  </li>
-  <li>why email is bad
-    <ul>
-      <li>third party doctrine</li>
-      <li>delete your old emails</li>
-      <li>just don’t use it for anything that matters</li>
-      <li>PGP (Encrypted email with PGP ***)
-        <ul>
-          <li>CP says: “just use the SSD guide”</li>
-          <li>tradeoffs/difficulties
-            <ul>
-              <li>Only encrypts the body of the message</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="ianal">IANAL???</h2>
-<ul>
-  <li>third-party doctrine and the Stored Communications Act</li>
-  <li>border-crossing and 4A device searches</li>
-</ul>
+<hr />
 
 <p>direct action:</p>
 <ul>
   <li>planning to lock yourself to bulldozers? smash atms? This guide isn’t for you.</li>
   <li>general advice: if the information isn’t there, they can’t get it</li>
   <li>plan in person</li>
-  <li>for something like that, find someone else who really knows what they’re doing
-— you can look up how to be better at opsec via tor, but tor isn’t a replacement for perfect opsec</li>
+  <li>for something like that, find someone else who really knows what they’re doing</li>
+  <li>you can look up how to be better at opsec via tor, but tor isn’t a replacement for perfect opsec</li>
 </ul>
 
 <h2 id="protest-guide">Protest guide:</h2>
@@ -241,6 +237,14 @@
   <li>touchid? lick your finger</li>
 </ul>
 
+<p>??</p>
+<h2 id="secure-your-online-privacy">Secure your online privacy</h2>
+<ul>
+  <li>Facebook privacy settings</li>
+  <li>Google privacy settings
+??</li>
+</ul>
+
 <p>border crossing:</p>
 <ul>
   <li>device search</li>
@@ -248,7 +252,7 @@
   <li>they can do whatever they want to you there</li>
 </ul>
 
-<p>===</p>
+<hr />
 
 <p>Inbox 0
 Delete stuff regularly
@@ -256,7 +260,7 @@ https everywhere, ublock or equivalent
 usage of signal for potentially sensitive stuff is good
 we’re attempting to foil mass surveillance so just generally using encryption. don’t use email for sensitive things</p>
 
-<p>=====</p>
+<hr />
 
 <p>Threat modeling</p>
 <ul>

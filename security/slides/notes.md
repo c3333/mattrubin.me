@@ -18,49 +18,64 @@
   - This guide is not right for you if you're planning more aggressive actions (black block smashing atms, locking yourself to friends on the interstate) or anything that could be construed as a criminal conspiracy 
   - I'll try give examples along the way of next steps, further research for advanced needs
 
-## The Basics (Tools you're already using)
+## The Basics (Securing the tools you're already using)
 
 ### Secure your device
 - Update everything!
+  - your phone, your computer, your web browser
 
 - Set a password on your phone
   - at least six digits
-  - for iphone, this enables full-disk encryption
 
-- turn on FDE on your computer
-  - if you lose your password, you lose your data
+- Turn on disk encryption on your phone and computer
+  - This prevents anyone who gets physical access to your phone or computer from getting the information on it
+  - On an iPhone, simply setting a passcode [enables full-disk encryption](https://ssd.eff.org/en/module/how-encrypt-your-iphone)
+  - Full-disk encryption can be enabled on Android phones, Mac and Windows computers
+  - Be aware: if you lose your password, you lose your data
 
 ### Secure your online accounts
-- Use strong passwords
-  - *Strong*
-  - *Never reuse*
-  - Diceware
+- Use [strong passwords](https://ssd.eff.org/en/module/creating-strong-passwords)
+  - *Never* reuse passwords
+    - If you reuse a username and password, then if one site is hacked and your password is stolen, then whoever has that information can immediately log in as you on any other website where you used the same password.
+  - Try a "[diceware](https://ssd.eff.org/en/module/animated-overview-how-make-super-secure-password-using-dice)" password
+    - randomly chosen words, strung together into a nonsense sentence.
     - current recommendation: 6-8 words
-    - Generate rando passwords if there's a character limit
+  - If the website has a character limit, generate a password that's a random jumble of letters, numbers, and symbols, and make it as long as possible
 
-- Password manager (Creating strong passwords and keeping them safe ***)
-  - Options:
+- [Password manager](https://ssd.eff.org/en/module/animated-overview-using-password-managers-stay-safe-online)
+  - A tool for generating strong, random passwords and keeping them safe
+  - A few options:
     - Keepassx
     - Last pass
-    - One password
+    - 1Password
     - Dashlane
-  - Tradeoffs
-   - Price, open source, local v cloud
+  - Tradeoffs between these options: Price, open source, local v cloud storage
 
-- Two-factor authentication
+- [Two-factor authentication](https://ssd.eff.org/en/glossary/two-factor-authentication)
   - Enable it everywhere you can (Use 2FA wherever available)
   - Prefer tokens instead of SMS
   - Your email account is the master key to your digital life
     - protect it with 2fa
     - protect other account password resets with 2fa
 
-??
-## Secure your online privacy
-- Facebook privacy settings
-- Google privacy settings
-??
 
-## Safe browsing
+## Safer communication
+
+- What is End-to-End Encryption?
+- Signal (encrypted messaging with signal ***)
+  - imessage and whatsapp are okay
+  - never use the green bubble
+- why email is bad:
+  - third-party doctrine and the Stored Communications Act
+  - delete your old emails
+  - just don't use it for anything that matters
+  - PGP (Encrypted email with PGP ***)
+    - CP says: "just use the SSD guide"
+    - tradeoffs/difficulties
+      - Only encrypts the body of the message
+
+
+## Safer web browsing
 
 ### Browser extensions (Privacy-enhancing browser addons ***)
 - HTTP v. HTTPS
@@ -96,34 +111,16 @@
 - intelligence agencies are probably watching nearly everything
 - how to climb a crane and drop a banner? I don't know. use tor to figure that out yourself.
 
-## Safe communication
-
-- What is End-to-End Encryption?
-- Signal (encrypted messaging with signal ***)
-  - imessage and whatsapp are okay
-  - never use the green bubble
-- why email is bad
-   - third party doctrine
-   - delete your old emails
-   - just don't use it for anything that matters
-  - PGP (Encrypted email with PGP ***)
-    - CP says: "just use the SSD guide"
-    - tradeoffs/difficulties
-      - Only encrypts the body of the message
 
 
-
-## IANAL???
-- third-party doctrine and the Stored Communications Act
-- border-crossing and 4A device searches
-
+-----
 
 direct action:
 - planning to lock yourself to bulldozers? smash atms? This guide isn't for you.
 - general advice: if the information isn't there, they can't get it
 - plan in person
 - for something like that, find someone else who really knows what they're doing
---- you can look up how to be better at opsec via tor, but tor isn't a replacement for perfect opsec
+- you can look up how to be better at opsec via tor, but tor isn't a replacement for perfect opsec
 
 
 ## Protest guide:
@@ -135,13 +132,20 @@ direct action:
 - touchid? lick your finger
 
 
+??
+## Secure your online privacy
+- Facebook privacy settings
+- Google privacy settings
+??
+
+
 border crossing:
 - device search
 - giving up your twitter handle
 - they can do whatever they want to you there
 
 
-===
+-----
 
 Inbox 0
 Delete stuff regularly
@@ -150,7 +154,7 @@ usage of signal for potentially sensitive stuff is good
 we're attempting to foil mass surveillance so just generally using encryption. don't use email for sensitive things
 
 
-=====
+-----
 
 Threat modeling
 - Borders
