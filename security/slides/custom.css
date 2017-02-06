@@ -1,0 +1,19 @@
+section .red,
+section a,
+.reveal .slides section .fragment.highlight-red.visible {
+	color: #c34;
+}
+section a.white {
+	color: white;
+}
+section a.black {
+	color: black;
+}
+section img.basic {
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+section img.space-below {
+	margin-bottom: 1.5em;
+}
