@@ -1,15 +1,22 @@
-Goal: pragmatic, empowering information
-
-I'm doing the threat modelling for you
-- what are you afraid of, and pick your tools accordingly
-relatively politically active, but not doing anything too illegal
-- but probably not up to crazy stuff (black block smashing atms, locking yourself to friends on the interstate)
-  - I cannot help you with anything that could be construed as a criminal conspiracy
--> then give examples along the way of next steps, further research for anvanced needs
-
-
-
 # Digital Security in the Age of Surveillance
+
+- Any conversation about security should start with threat modeling.
+  - Basically: figuring out what you're afraid of, and choosing your security tools and techniques based on that threat.
+  - The [Surveillance Self-Defense](https://ssd.eff.org/en/module/introduction-threat-modeling) guide has a number of pre-made threat models, and "playlists" with resources and advice tailored to different groups of people.
+    - [Academic researcher](https://ssd.eff.org/en/playlist/academic-researcher)
+    - [Activist or protester](https://ssd.eff.org/en/playlist/activist-or-protester)
+    - [Human rights defender](https://ssd.eff.org/en/playlist/human-rights-defender)
+    - [Journalism Student](https://ssd.eff.org/en/playlist/journalism-student)
+    - [LGBTQ Youth](https://ssd.eff.org/en/playlist/lgbtq-youth)
+
+- Today, I'm doing the threat modelling for you
+  - I've made several assumptions about the target audience of this presentation:
+    - Much of your work is done on a computer, and most of your communication happens through email and text messaging
+    - You're active on social media, both privately and sometimes publicly. You may have a blog, though you wouldn't consider yourself a journalist.
+    - You are likely to be involved in leadership and organization for groups that include marginalized people
+    - You're going to show up at a protest, but you're not planning anything too illegal.
+  - This guide is not right for you if you're planning more aggressive actions (black block smashing atms, locking yourself to friends on the interstate) or anything that could be construed as a criminal conspiracy 
+  - I'll try give examples along the way of next steps, further research for advanced needs
 
 ## The Basics (Tools you're already using)
 
