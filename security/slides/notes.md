@@ -1,4 +1,6 @@
-# Digital Security in the Age of Surveillance
+# Digital Security in the Surveillance Age
+
+*These notes are derived from the speaker notes for a presentation. If you want guides that were written to be read by a broad audience, check out the "[Other Resources](#other-resources)" below.*
 
 - Any conversation about security should start with threat modeling.
   - Basically: figuring out what you're afraid of, and choosing your security tools and techniques based on that threat.
@@ -111,8 +113,17 @@
 - intelligence agencies are probably watching nearly everything
 - how to climb a crane and drop a banner? I don't know. use tor to figure that out yourself.
 
+-----
+
+## Other Resources
+- The [Electronic Frontier Foundation](https://www.eff.org)'s [Surveillance Self-Defense](https://ssd.eff.org) guide ("Tips, Tools and How-tos for Safer Online Communications")
+- [*A DIY Guide to Feminist Cybersecurity*](https://hackblossom.org/cybersecurity/)
+- [*Surveillance Self-Defense for Journalists*](https://medium.com/the-intercept/surveillance-self-defense-for-journalists-ce627e332db6)
+- [*Surveillance Self-Defense Against the Trump Administration*](https://theintercept.com/2016/11/12/surveillance-self-defense-against-the-trump-administration/)
+- [*Securing Your Digital Life Like a Normal Person*](https://medium.com/tinfoil-press/securing-your-digital-life-like-a-normal-person-a-hasty-and-incomplete-guide-56437f127425)
 
 
+<!--
 -----
 
 direct action:
@@ -167,12 +178,6 @@ Threat modeling
 - Coffee shop snoopers
   - trade off of a vpn
 
-Resources:
-- SSD
-- "Surveillance Self-Defense for Journalists" (https://medium.com/the-intercept/surveillance-self-defense-for-journalists-ce627e332db6)
-- "Chatting in Secret While We’re All Being Watched" (https://theintercept.com/2015/07/14/communicating-secret-watched/)
-- Cryptoparty
-
 
 How do you know you can trust your tools?
 basic and useable is better than bulletproof and ignored
@@ -188,3 +193,5 @@ Encryption doesn't save you from a local virus
 - TAILS
 - Qubes
 - SecureDrop
+
+-->
