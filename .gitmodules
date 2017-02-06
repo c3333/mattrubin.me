@@ -1,3 +1,6 @@
 [submodule "authenticator"]
 	path = authenticator
 	url = https://github.com/mattrubin/authenticator.git
+[submodule "security/slides"]
+	path = security/slides
+	url = https://github.com/mattrubin/digital-security-slides.git
