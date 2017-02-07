@@ -150,27 +150,51 @@
   </li>
 </ul>
 
-<h2 id="safer-communication">Safer communication</h2>
+<h2 id="secure-communication">Secure Communication</h2>
 
 <ul>
-  <li>What is End-to-End Encryption?</li>
-  <li>Signal (encrypted messaging with signal ***)
+  <li>The most secure communication tools use <a href="https://ssd.eff.org/en/glossary/end-end-encryption">End-to-End Encryption</a>
     <ul>
-      <li>imessage and whatsapp are okay</li>
-      <li>never use the green bubble</li>
+      <li>As mentioned earlier, <em>encryption</em> is a tool for taking easy-to-read information and scrambling it so it can only be read by someone with the correct key.</li>
+      <li><em>End-to-end encryption</em> means a message is encrypted (scrambled) before it’s sent, and can only be decrypted (unscrambled) by the recipient after it’s receieved, so that no one in between – not even the person or company transporting the message – can read what the message says.</li>
+      <li>With most common communication services, the provider of the service can read all of your messages if they want to
+        <ul>
+          <li>Google could read all of your emails in Gmail, Facebook could read all of your chats in Messenger</li>
+          <li>This means that someone who works for that company, someone who can coerce someone working for that company, or someone just eavesdropping on the connection could potentially read your messages</li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li>why email is bad:
+  <li><strong><a href="https://whispersystems.org">Signal</a></strong> is an encrypted text messaging app
     <ul>
-      <li>third-party doctrine and the Stored Communications Act</li>
-      <li>delete your old emails</li>
-      <li>just don’t use it for anything that matters</li>
-      <li>PGP (Encrypted email with PGP ***)
+      <li>Signal can also be used to make encrypted voice calls</li>
+      <li>If you’re sending text messages, iMessage and WhatsApp also offer end-to-end encryption</li>
+      <li>SMS (standard text messages sent via your phone carrier) is very insecure
         <ul>
-          <li>CP says: “just use the SSD guide”</li>
-          <li>tradeoffs/difficulties
+          <li>On iPhone, <em>beware of the green bubble!</em></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Email is generally <strong>not secure</strong>
+    <ul>
+      <li>Most email is unencrypted by default</li>
+      <li>Because of the <a href="https://en.wikipedia.org/wiki/Third-party_doctrine"><em>third-party doctrine</em></a>, it’s relatively easy for the government to get your old emails from your email provider.
+        <ul>
+          <li>(I am not a lawyer. The <a href="https://en.wikipedia.org/wiki/Stored_Communications_Act">Stored Communications Act</a> is probably also relevant here. It’s probably easier to just delete your old emails than to end up arguing about the fourth amendment in a federal courtroom.)</li>
+        </ul>
+      </li>
+      <li>So, just don’t use use email for anything that really matters
+        <ul>
+          <li>If you <em>need</em> to use email to send something sensitive, check out <a href="https://protonmail.com">ProtonMail</a></li>
+        </ul>
+      </li>
+      <li>For the sake of completeness, I will mention: There is a tool called <a href="https://ssd.eff.org/en/module/how-use-pgp-mac-os-x">PGP</a> for encrypting email
+        <ul>
+          <li>It’s notoriously hard to use, and hard to use correctly</li>
+          <li>It’s also not perfect, even when you use it right
             <ul>
-              <li>Only encrypts the body of the message</li>
+              <li>Only encrypts the body of the message, not the subject or the recipients</li>
             </ul>
           </li>
         </ul>
@@ -180,6 +204,8 @@
 </ul>
 
 <h2 id="safer-web-browsing">Safer web browsing</h2>
+
+<p><em>Note to self: this section needs to be expanded and clarified.</em></p>
 
 <h3 id="browser-extensions-privacy-enhancing-browser-addons-">Browser extensions (Privacy-enhancing browser addons ***)</h3>
 <ul>
@@ -209,7 +235,7 @@
   </li>
 </ul>
 
-<h2 id="vpn">VPN</h2>
+<h3 id="vpn">VPN</h3>
 <ul>
   <li>just don’t connect to public wifi if you can avoid it
     <ul>

@@ -74,23 +74,34 @@
     - protect other account password resets with 2FA
 
 
-## Safer communication
+## Secure Communication
 
-- What is End-to-End Encryption?
-- Signal (encrypted messaging with signal ***)
-  - imessage and whatsapp are okay
-  - never use the green bubble
-- why email is bad:
-  - third-party doctrine and the Stored Communications Act
-  - delete your old emails
-  - just don't use it for anything that matters
-  - PGP (Encrypted email with PGP ***)
-    - CP says: "just use the SSD guide"
-    - tradeoffs/difficulties
-      - Only encrypts the body of the message
+- The most secure communication tools use [End-to-End Encryption](https://ssd.eff.org/en/glossary/end-end-encryption)
+  - As mentioned earlier, *encryption* is a tool for taking easy-to-read information and scrambling it so it can only be read by someone with the correct key.
+  - *End-to-end encryption* means a message is encrypted (scrambled) before it's sent, and can only be decrypted (unscrambled) by the recipient after it's receieved, so that no one in between – not even the person or company transporting the message – can read what the message says.
+  - With most common communication services, the provider of the service can read all of your messages if they want to
+    - Google could read all of your emails in Gmail, Facebook could read all of your chats in Messenger
+    - This means that someone who works for that company, someone who can coerce someone working for that company, or someone just eavesdropping on the connection could potentially read your messages 
+- **[Signal](https://whispersystems.org)** is an encrypted text messaging app
+  - Signal can also be used to make encrypted voice calls
+  - If you're sending text messages, iMessage and WhatsApp also offer end-to-end encryption
+  - SMS (standard text messages sent via your phone carrier) is very insecure
+    - On iPhone, *beware of the green bubble!*
+- Email is generally **not secure**
+  - Most email is unencrypted by default
+  - Because of the [*third-party doctrine*](https://en.wikipedia.org/wiki/Third-party_doctrine), it's relatively easy for the government to get your old emails from your email provider.
+    - (I am not a lawyer. The [Stored Communications Act](https://en.wikipedia.org/wiki/Stored_Communications_Act) is probably also relevant here. It's probably easier to just delete your old emails than to end up arguing about the fourth amendment in a federal courtroom.)
+  - So, just don't use use email for anything that really matters
+    - If you *need* to use email to send something sensitive, check out [ProtonMail](https://protonmail.com)
+  - For the sake of completeness, I will mention: There is a tool called [PGP](https://ssd.eff.org/en/module/how-use-pgp-mac-os-x) for encrypting email
+    - It's notoriously hard to use, and hard to use correctly
+    - It's also not perfect, even when you use it right
+      - Only encrypts the body of the message, not the subject or the recipients
 
 
 ## Safer web browsing
+
+*Note to self: this section needs to be expanded and clarified.*
 
 ### Browser extensions (Privacy-enhancing browser addons ***)
 - HTTP v. HTTPS
@@ -106,8 +117,7 @@
     - ublock origin
     - noscript?
 
-
-## VPN
+### VPN
 - just don't connect to public wifi if you can avoid it
   - if you're at a protest, DON'T CONNECT TO PUBLIC WIFI
   - tether to your phone if you need internet
