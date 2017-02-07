@@ -2,9 +2,9 @@
 
 *These notes are derived from the speaker notes for a presentation. If you want guides that were written to be read by a broad audience, check out the "[Other Resources](#other-resources)" below.*
 
-- Any conversation about security should start with threat modeling.
+- Any conversation about security should start with [threat modeling](https://ssd.eff.org/en/module/introduction-threat-modeling).
   - Basically: figuring out what you're afraid of, and choosing your security tools and techniques based on that threat.
-  - The [Surveillance Self-Defense](https://ssd.eff.org/en/module/introduction-threat-modeling) guide has a number of pre-made threat models, and "playlists" with resources and advice tailored to different groups of people.
+  - In the [Surveillance Self-Defense](https://ssd.eff.org/en/module/introduction-threat-modeling) guide, the authors have considered some typical threat models for various groups of people, and constructed ["playlists" with resources and advice](https://ssd.eff.org/en/playlist) tailored to the different groups.
     - [Academic researcher](https://ssd.eff.org/en/playlist/academic-researcher)
     - [Activist or protester](https://ssd.eff.org/en/playlist/activist-or-protester)
     - [Human rights defender](https://ssd.eff.org/en/playlist/human-rights-defender)
@@ -17,48 +17,61 @@
     - You're active on social media, both privately and sometimes publicly. You may have a blog, though you wouldn't consider yourself a journalist.
     - You are likely to be involved in leadership and organization for groups that include marginalized people
     - You're going to show up at a protest, but you're not planning anything too illegal.
-  - This guide is not right for you if you're planning more aggressive actions (black block smashing atms, locking yourself to friends on the interstate) or anything that could be construed as a criminal conspiracy 
+  - If this doesn't sound like you, then you probably have a different threat model
+    - This guide is not right for you if you're planning more aggressive actions (black block smashing atms, locking yourself to friends blocking the interstate) or anything that could be construed as a criminal conspiracy 
   - I'll try give examples along the way of next steps, further research for advanced needs
 
 ## The Basics (Securing the tools you're already using)
 
 ### Secure your device
-- Update everything!
+- **Update everything!**
   - your phone, your computer, your web browser
+  - The latest software will protect you against known bugs and vulnerabilities
 
-- Set a password on your phone
-  - at least six digits
+- Set a passcode on your phone
+  - Without a passcode, physical access to your phone means access to all of your email, text messages, social media accounts, photos, and more...
+  - A passcode sould be at least 6 digits
+    - if you want, most phones have the option of enabling a full long password
+  - A fingerprint sensor (like iPhone's TouchID) is great for convenience, but can be bad for security
+    - It's a lot easier (and possibly legal) for someone to force your thumb onto your phone than it is for someone to force you to reveal a password
+    - In a risky situation, TouchID can be temporarily disabled by turning off your phone... or licking your finger
 
 - Turn on disk encryption on your phone and computer
-  - This prevents anyone who gets physical access to your phone or computer from getting the information on it
+  - *Encryption* is a tool for taking easy-to-read information and scrambling it so it can only be read by someone with the correct key.
+  - [Full-disk encryption](https://ssd.eff.org/en/glossary/full-disk-encryption) prevents anyone who gets physical access to your phone or computer from getting the information on it
   - On an iPhone, simply setting a passcode [enables full-disk encryption](https://ssd.eff.org/en/module/how-encrypt-your-iphone)
   - Full-disk encryption can be enabled on Android phones, Mac and Windows computers
-  - Be aware: if you lose your password, you lose your data
+  - Be aware: if you forget your password, you lose your data
 
 ### Secure your online accounts
 - Use [strong passwords](https://ssd.eff.org/en/module/creating-strong-passwords)
   - *Never* reuse passwords
     - If you reuse a username and password, then if one site is hacked and your password is stolen, then whoever has that information can immediately log in as you on any other website where you used the same password.
-  - Try a "[diceware](https://ssd.eff.org/en/module/animated-overview-how-make-super-secure-password-using-dice)" password
+  - For a strong password, try a "[diceware](https://ssd.eff.org/en/module/animated-overview-how-make-super-secure-password-using-dice)" password
     - randomly chosen words, strung together into a nonsense sentence.
     - current recommendation: 6-8 words
   - If the website has a character limit, generate a password that's a random jumble of letters, numbers, and symbols, and make it as long as possible
+  - "But how will I generate and remember all of these random passwords??" you ask...
 
-- [Password manager](https://ssd.eff.org/en/module/animated-overview-using-password-managers-stay-safe-online)
+- Usa a [password manager](https://ssd.eff.org/en/module/animated-overview-using-password-managers-stay-safe-online)
   - A tool for generating strong, random passwords and keeping them safe
+  - All of your unique passwords are encrypted and locked behind one secure master password.
   - A few options:
-    - Keepassx
-    - Last pass
     - 1Password
+    - KeePassX
+    - LastPass
     - Dashlane
-  - Tradeoffs between these options: Price, open source, local v cloud storage
+  - I personally use and recommend 1Password, but there are factors to be considered for all of these: price, open v. closed source, local v. cloud storage, etc.
 
 - [Two-factor authentication](https://ssd.eff.org/en/glossary/two-factor-authentication)
-  - Enable it everywhere you can (Use 2FA wherever available)
-  - Prefer tokens instead of SMS
-  - Your email account is the master key to your digital life
-    - protect it with 2fa
-    - protect other account password resets with 2fa
+  - Two-factor authentication is a system that adds a second *factor* to the process of logging into a website:
+    - The first factor is your password – but this doesn't change often and can be intercepted and used by someone else. (or you could have reused passwords and had another site's database hacked...)
+    - The second factor is your smartphone – either a special app to generate rotating authentication codes, or a text message sent to your phone when you try to log in.
+  - Enable 2FA on every website whee it's available
+  - If you have a choice, using an authenticator app instead of SMS means your security codes can'e be intercepted via your phone company
+  - Because of password resets, your email account is the master key to your digital life
+    - protect it with 2FA
+    - protect other account password resets with 2FA
 
 
 ## Safer communication

@@ -25,10 +25,10 @@
 <p><em>These notes are derived from the speaker notes for a presentation. If you want guides that were written to be read by a broad audience, check out the “<a href="#other-resources">Other Resources</a>” below.</em></p>
 
 <ul>
-  <li>Any conversation about security should start with threat modeling.
+  <li>Any conversation about security should start with <a href="https://ssd.eff.org/en/module/introduction-threat-modeling">threat modeling</a>.
     <ul>
       <li>Basically: figuring out what you’re afraid of, and choosing your security tools and techniques based on that threat.</li>
-      <li>The <a href="https://ssd.eff.org/en/module/introduction-threat-modeling">Surveillance Self-Defense</a> guide has a number of pre-made threat models, and “playlists” with resources and advice tailored to different groups of people.
+      <li>In the <a href="https://ssd.eff.org/en/module/introduction-threat-modeling">Surveillance Self-Defense</a> guide, the authors have considered some typical threat models for various groups of people, and constructed <a href="https://ssd.eff.org/en/playlist">“playlists” with resources and advice</a> tailored to the different groups.
         <ul>
           <li><a href="https://ssd.eff.org/en/playlist/academic-researcher">Academic researcher</a></li>
           <li><a href="https://ssd.eff.org/en/playlist/activist-or-protester">Activist or protester</a></li>
@@ -49,7 +49,11 @@
           <li>You’re going to show up at a protest, but you’re not planning anything too illegal.</li>
         </ul>
       </li>
-      <li>This guide is not right for you if you’re planning more aggressive actions (black block smashing atms, locking yourself to friends on the interstate) or anything that could be construed as a criminal conspiracy</li>
+      <li>If this doesn’t sound like you, then you probably have a different threat model
+        <ul>
+          <li>This guide is not right for you if you’re planning more aggressive actions (black block smashing atms, locking yourself to friends blocking the interstate) or anything that could be construed as a criminal conspiracy</li>
+        </ul>
+      </li>
       <li>I’ll try give examples along the way of next steps, further research for advanced needs</li>
     </ul>
   </li>
@@ -59,22 +63,35 @@
 
 <h3 id="secure-your-device">Secure your device</h3>
 <ul>
-  <li>Update everything!
+  <li><strong>Update everything!</strong>
     <ul>
       <li>your phone, your computer, your web browser</li>
+      <li>The latest software will protect you against known bugs and vulnerabilities</li>
     </ul>
   </li>
-  <li>Set a password on your phone
+  <li>Set a passcode on your phone
     <ul>
-      <li>at least six digits</li>
+      <li>Without a passcode, physical access to your phone means access to all of your email, text messages, social media accounts, photos, and more…</li>
+      <li>A passcode sould be at least 6 digits
+        <ul>
+          <li>if you want, most phones have the option of enabling a full long password</li>
+        </ul>
+      </li>
+      <li>A fingerprint sensor (like iPhone’s TouchID) is great for convenience, but can be bad for security
+        <ul>
+          <li>It’s a lot easier (and possibly legal) for someone to force your thumb onto your phone than it is for someone to force you to reveal a password</li>
+          <li>In a risky situation, TouchID can be temporarily disabled by turning off your phone… or licking your finger</li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li>Turn on disk encryption on your phone and computer
     <ul>
-      <li>This prevents anyone who gets physical access to your phone or computer from getting the information on it</li>
+      <li><em>Encryption</em> is a tool for taking easy-to-read information and scrambling it so it can only be read by someone with the correct key.</li>
+      <li><a href="https://ssd.eff.org/en/glossary/full-disk-encryption">Full-disk encryption</a> prevents anyone who gets physical access to your phone or computer from getting the information on it</li>
       <li>On an iPhone, simply setting a passcode <a href="https://ssd.eff.org/en/module/how-encrypt-your-iphone">enables full-disk encryption</a></li>
       <li>Full-disk encryption can be enabled on Android phones, Mac and Windows computers</li>
-      <li>Be aware: if you lose your password, you lose your data</li>
+      <li>Be aware: if you forget your password, you lose your data</li>
     </ul>
   </li>
 </ul>
@@ -88,37 +105,45 @@
           <li>If you reuse a username and password, then if one site is hacked and your password is stolen, then whoever has that information can immediately log in as you on any other website where you used the same password.</li>
         </ul>
       </li>
-      <li>Try a “<a href="https://ssd.eff.org/en/module/animated-overview-how-make-super-secure-password-using-dice">diceware</a>” password
+      <li>For a strong password, try a “<a href="https://ssd.eff.org/en/module/animated-overview-how-make-super-secure-password-using-dice">diceware</a>” password
         <ul>
           <li>randomly chosen words, strung together into a nonsense sentence.</li>
           <li>current recommendation: 6-8 words</li>
         </ul>
       </li>
       <li>If the website has a character limit, generate a password that’s a random jumble of letters, numbers, and symbols, and make it as long as possible</li>
+      <li>“But how will I generate and remember all of these random passwords??” you ask…</li>
     </ul>
   </li>
-  <li><a href="https://ssd.eff.org/en/module/animated-overview-using-password-managers-stay-safe-online">Password manager</a>
+  <li>Usa a <a href="https://ssd.eff.org/en/module/animated-overview-using-password-managers-stay-safe-online">password manager</a>
     <ul>
       <li>A tool for generating strong, random passwords and keeping them safe</li>
+      <li>All of your unique passwords are encrypted and locked behind one secure master password.</li>
       <li>A few options:
         <ul>
-          <li>Keepassx</li>
-          <li>Last pass</li>
           <li>1Password</li>
+          <li>KeePassX</li>
+          <li>LastPass</li>
           <li>Dashlane</li>
         </ul>
       </li>
-      <li>Tradeoffs between these options: Price, open source, local v cloud storage</li>
+      <li>I personally use and recommend 1Password, but there are factors to be considered for all of these: price, open v. closed source, local v. cloud storage, etc.</li>
     </ul>
   </li>
   <li><a href="https://ssd.eff.org/en/glossary/two-factor-authentication">Two-factor authentication</a>
     <ul>
-      <li>Enable it everywhere you can (Use 2FA wherever available)</li>
-      <li>Prefer tokens instead of SMS</li>
-      <li>Your email account is the master key to your digital life
+      <li>Two-factor authentication is a system that adds a second <em>factor</em> to the process of logging into a website:
         <ul>
-          <li>protect it with 2fa</li>
-          <li>protect other account password resets with 2fa</li>
+          <li>The first factor is your password – but this doesn’t change often and can be intercepted and used by someone else. (or you could have reused passwords and had another site’s database hacked…)</li>
+          <li>The second factor is your smartphone – either a special app to generate rotating authentication codes, or a text message sent to your phone when you try to log in.</li>
+        </ul>
+      </li>
+      <li>Enable 2FA on every website whee it’s available</li>
+      <li>If you have a choice, using an authenticator app instead of SMS means your security codes can’e be intercepted via your phone company</li>
+      <li>Because of password resets, your email account is the master key to your digital life
+        <ul>
+          <li>protect it with 2FA</li>
+          <li>protect other account password resets with 2FA</li>
         </ul>
       </li>
     </ul>
