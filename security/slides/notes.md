@@ -57,18 +57,18 @@
   - A tool for generating strong, random passwords and keeping them safe
   - All of your unique passwords are encrypted and locked behind one secure master password.
   - A few options:
-    - 1Password
-    - KeePassX
-    - LastPass
-    - Dashlane
+    - [1Password](https://1password.com)
+    - [KeePassX](https://ssd.eff.org/en/module/how-use-keepassx)
+    - [LastPass](https://www.lastpass.com)
+    - [Dashlane](https://www.dashlane.com)
   - I personally use and recommend 1Password, but there are factors to be considered for all of these: price, open v. closed source, local v. cloud storage, etc.
 
 - [Two-factor authentication](https://ssd.eff.org/en/glossary/two-factor-authentication)
   - Two-factor authentication is a system that adds a second *factor* to the process of logging into a website:
     - The first factor is your password – but this doesn't change often and can be intercepted and used by someone else. (or you could have reused passwords and had another site's database hacked...)
     - The second factor is your smartphone – either a special app to generate rotating authentication codes, or a text message sent to your phone when you try to log in.
-  - Enable 2FA on every website whee it's available
-  - If you have a choice, using an authenticator app instead of SMS means your security codes can'e be intercepted via your phone company
+  - Enable 2FA on every website when it's available
+  - If you have a choice, using an authenticator app instead of SMS means your security codes can't be intercepted via your phone company
   - Because of password resets, your email account is the master key to your digital life
     - protect it with 2FA
     - protect other account password resets with 2FA
