@@ -96,8 +96,7 @@ ul, ol, div, p {
 
 	margin: 0 !important;
 	padding: 0 !important;
-	-webkit-box-sizing: border-box !important;
-	        box-sizing: border-box !important;
+	box-sizing: border-box !important;
 	min-height: 1px;
 
 	opacity: 1 !important;
@@ -118,8 +117,7 @@ ul, ol, div, p {
 }
 
 .reveal img {
-	-webkit-box-shadow: none;
-	        box-shadow: none;
+	box-shadow: none;
 }
 
 .reveal .roll {

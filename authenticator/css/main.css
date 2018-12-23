@@ -131,6 +131,22 @@ main li {
     margin: 0.5em 0;
 }
 
+main h1 {
+    font-weight: 300;
+}
+
+main > h1:first-child {
+    margin-top: 0;
+}
+
+main h2 {
+    font-weight: 200;
+}
+
+header a {
+    text-decoration: none;
+}
+
 header svg {
     margin: 5px;
 }
@@ -251,8 +267,7 @@ img.screenshot {
     * {
         background: transparent !important;
         color: #000 !important;
-        -webkit-box-shadow: none !important;
-                box-shadow: none !important;
+        box-shadow: none !important;
         text-shadow: none !important;
     }
 

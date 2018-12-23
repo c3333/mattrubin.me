@@ -161,9 +161,7 @@
 
 		-webkit-transform: none !important;
 		        transform: none !important;
-
-		-webkit-transition: none !important;
-		        transition: none !important;
+		transition: none !important;
 	}
 	.reveal .slides section.stack {
 		padding: 0 !important;
@@ -183,8 +181,7 @@
 		margin: 15px 0px;
 		background: rgba(255,255,255,1);
 		border: 1px solid #666;
-		-webkit-box-shadow: none;
-		        box-shadow: none;
+		box-shadow: none;
 	}
 
 	.reveal section small {

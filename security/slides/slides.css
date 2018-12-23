@@ -12,8 +12,7 @@ section a.black {
 section img.basic {
 	background: none;
 	border: none;
-	-webkit-box-shadow: none;
-	        box-shadow: none;
+	box-shadow: none;
 }
 section img.space-below {
 	margin-bottom: 1.5em;
